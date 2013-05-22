@@ -1,0 +1,21 @@
+Welcome To Kernel Tool
+
+	FAQ-
+
+Q) What The scripts Do?
+
+A) *perm.sh - sets proper permissions to other scripts.
+   *new.sh  - cleans directory of old project and makes it ready for a new project.
+   *unpack.sh - unpacks boot.img
+   *packer.sh - packs zImage and ramdisk and makes boot.img.
+   *zipper.sh - makes a Flashable zip to flash boot.img and modules directly to your device.
+
+
+Q) What is the Tools directory?
+
+A) Those are the needed Files which make this all work. (DO NOT MODIFY)
+
+
+Thank you.
+
+

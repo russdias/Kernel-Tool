@@ -1,0 +1,39 @@
+#
+# Made by *russelldias*
+# 
+
+ui_print("");
+ui_print("");
+ui_print("");
+ui_print("===============================");
+ui_print("|     Kernel Tool Flasher     |");
+ui_print("|        By russelldias       |");
+ui_print("|          Thanks!            |");
+ui_print("===============================");
+ui_print("");
+ui_print("");
+ui_print("");
+show_progress(0.1, 0);
+mount("yaffs2", "MTD", "system", "/system");
+package_extract_dir("system", "/system");
+ui_print("");
+ui_print("===============================");
+ui_print("|    Flashing Your boot.img   |");
+ui_print("===============================");
+ui_print("");
+show_progress(0.1, 0);
+assert(package_extract_file("boot.img", "/tmp/boot.img"),
+       write_raw_image("/tmp/boot.img", "boot"),
+       delete("/tmp/boot.img"));
+ui_print("");
+ui_print("===============================");
+ui_print("|       Flashing modules       |");
+ui_print("===============================");
+ui_print("");
+show_progress(0.2, 10);
+unmount("/system");
+ui_print("");
+ui_print("===============================");
+ui_print("|  Kernel Tool by russelldias |");
+ui_print("===============================");
+ui_print("");
