@@ -2,7 +2,7 @@
 
 # Kernel Tool	
 # Author: Russell Dias
-# Version: 0.0.1
+# Version: 0.0.2
 # Date: May 19, 2013
 # Contact: russell.dias98@gmail.com
 
@@ -28,15 +28,12 @@ rm *.pem
 rm -r META-INF 
 rm -r system
 cd ..
-# ...
- 
-s1=`ls -lh boot.img | sed -e 's/.* [ ]*\([0-9]*\.[0-9]*[MK]\) .*/\1/g'`
+#Zip sizw
 cd target 
-s2=`ls -lh boot.img | sed -e 's/.* [ ]*\([0-9]*\.[0-9]*[MK]\) .*/\1/g'`
+s1=`ls -lh kernel-tool-SIGNED.zip | sed -e 's/.* [ ]*\([0-9]*\.[0-9]*[MK]\) .*/\1/g'`
 rm boot.img 
 tput setaf 3
-echo "Size of Initial boot.img = $s1" 
-echo "Size of your boot.img = $s2"
+echo "Size of Zip is = $s1" 
 tput setaf 1
 echo "Flashable zip is target/kernel-tool-SIGNED.zip"
 tput sgr0
